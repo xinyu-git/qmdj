@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>《坦克世界》</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="keywords" content="《坦克世界》">
+<meta name="description" content="《坦克世界》">
+<meta name="full-screen" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="format-detection" content="address=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta http-equiv="Expires" content="-1">
+<meta http-equiv="Cache-Control" content="no-cache">
+<meta http-equiv="Pragma" content="no-cache">
+<link rel="icon" href="http://wot.kongzhong.com/images/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="http://wot.kongzhong.com/images/favicon.ico" type="image/x-icon">
+<link rel="bookmark" href="http://wot.kongzhong.com/images/favicon.ico" type="image/x-icon">
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/rem.js"></script>
+<link type="text/css" rel="stylesheet" href="css/com.css">
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+</head>
+
+<body>
+<!--[if lte IE 8]>
+<body class="ite">
+<p class="chromeframe">亲，浏览器版本过低，换一个吧！<a href="http://windows.microsoft.com/" target="_blank">升级您的IE浏览器</a>，或使用<a href="http://www.google.cn/intl/zh-CN/chrome/" target="_blank">Google Chrome</a>、<a href="http://www.firefox.com.cn/download/" target="_blank">Firefox</a>等高级浏览器。</p>
+<![endif]-->
+<div class="wrap">
+	<div class="main_wrap">
+		<!-- 消息 -->
+		<div class="main_public show">
+			<div class="message_wrap">
+				<div class="mes_btn clearfloat">
+					<!-- 当前样式类active  有新消息时的小红点类newsActive -->
+					<a href="javascript:;" class="active">系统消息<i></i></a>
+					<a href="javascript:;">好友消息<i></i></a>
+					<a href="javascript:;" class="newsActive">好友请求<i></i></a>
+				</div>
+				<div class="mes_box">
+					<!-- 系统消息 -->
+					<div class="mes_part show">
+						<ul class="mes_list">
+							<li>
+								<a href="javascript:;">
+									<!-- 未读unread  已读read -->
+									<span class="unread"></span>
+									<span class="mes_info">备战排位赛，赢好礼</span>
+									<span class="mes_time">3天前</span>
+								</a>
+								<span class="mes_delete" onclick="Tips.showMessage();"></span>
+							</li>
+							<li>
+								<a href="javascript:;">
+									<!-- 未读unread  已读read -->
+									<span class="read"></span>
+									<span class="mes_info">备战排位赛，赢好礼</span>
+									<span class="mes_time">3天前</span>
+									<span class="mes_delete" onclick="Tips.showMessage();"></span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;">
+									<span class="unread"></span>
+									<span class="mes_info">备战排位赛，赢好礼</span>
+									<span class="mes_time">3天前</span>
+									<span class="mes_delete" onclick="Tips.showMessage();"></span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;">
+									<span class="unread"></span>
+									<span class="mes_info">备战排位赛，赢好礼</span>
+									<span class="mes_time">3天前</span>
+									<span class="mes_delete" onclick="Tips.showMessage();"></span>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<!-- 好友消息 -->
+					<div class="mes_part">
+						<ul class="mes_list">
+							<li>
+								<a href="javascript:;">
+									<!-- 未读unread  已读read -->
+									<span class="unread"></span>
+									<span class="mesFri_info">
+										<p class="mesFri_p clearfloat"><i class="mesFri_name">好友姓名</i><i class="mesFri_time">3天时间</i></p>
+										<p class="mesFri_con">内容预览内容预览内容预览内容预览内容预览内容预览内容预览内容预览内容预览内容预览内容预览内容预览内容预览内</p>
+									</span>
+									<span class="mes_delete" onclick="Tips.showMessage();"></span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;">
+									<!-- 未读unread  已读read -->
+									<span class="read"></span>
+									<span class="mesFri_info">
+										<p class="mesFri_p clearfloat"><i class="mesFri_name">好友姓名</i><i class="mesFri_time">3天时间</i></p>
+										<p class="mesFri_con">内容预览内容预览内容预览内容预览内容预览内容预览内容预览内容预览内容预览内容预览内容预览内容预览内容预览内</p>
+									</span>
+									<span class="mes_delete"></span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;">
+									<!-- 未读unread  已读read -->
+									<span class="unread"></span>
+									<span class="mesFri_info">
+										<p class="mesFri_p clearfloat"><i class="mesFri_name">好友姓名</i><i class="mesFri_time">3天时间</i></p>
+										<p class="mesFri_con">内容预览内容预览内容预览内容预览内容预览内容预览内容预览内容预览内容预览内容预览内容预览内容预览内容预览内</p>
+									</span>
+									<span class="mes_delete"></span>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<!-- 好友请求 -->
+					<div class="mes_part">
+						<ul class="request_list">
+							<li>
+								<span class="req_pic"><img src="images/req_pic.png" /></span>
+								<span class="req_info_box">
+									<p class="req_p clearfloat">
+										<i class="req_name">刘海砍樵的</i>
+										<i>想要加您为好友</i>
+										<i class="req_time">3天前</i>
+									</p>
+									<p>您好，我是XXXX</p>
+									<p class="req_btn">
+										<a href="javascript:;" class="pass">通过</a>
+										<a href="javascript:;" class="refused">拒绝</a>
+									</p>
+								</span>
+							</li>
+							<li>
+								<span class="req_pic"><img src="images/req_pic.png" /></span>
+								<span class="req_info_box">
+									<p class="req_p clearfloat">
+										<i class="req_name">刘海砍樵的</i>
+										<i>想要加您为好友</i>
+										<i class="req_time">3天前</i>
+									</p>
+									<p>您好，我是XXXX</p>
+									<p class="req_btn">
+										<a href="javascript:;" class="pass">通过</a>
+										<a href="javascript:;" class="refused">拒绝</a>
+									</p>
+								</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 底部导航 -->
+	<div class="fixed_wrap">
+		<a href="map.html" class="fix_btn1 "><i></i>地图</a>
+		<a href="message.html" class="fix_btn2 active"><i></i><em></em>消息</a>
+		<a href="ranking.html" class="fix_btn3"><i></i>排行</a>
+		<a href="friend.html" class="fix_btn4"><i></i>好友</a>
+		<a href="myCenter.html" class="fix_btn5"><i></i>我的</a>
+	</div>
+</div>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/style.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+
+<div style="display:none"><script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_2492438'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s13.cnzz.com/stat.php%3Fid%3D2492438' type='text/javascript'%3E%3C/script%3E"));</script></div>
+</body>
+
+
+</html>

@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>《坦克世界》</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="keywords" content="《坦克世界》">
+<meta name="description" content="《坦克世界》">
+<meta name="full-screen" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="format-detection" content="address=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta http-equiv="Expires" content="-1">
+<meta http-equiv="Cache-Control" content="no-cache">
+<meta http-equiv="Pragma" content="no-cache">
+<link rel="icon" href="http://wot.kongzhong.com/images/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="http://wot.kongzhong.com/images/favicon.ico" type="image/x-icon">
+<link rel="bookmark" href="http://wot.kongzhong.com/images/favicon.ico" type="image/x-icon">
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/rem.js"></script>
+<link type="text/css" rel="stylesheet" href="css/com.css">
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+
+</head>
+
+<body class="fullscreen">
+<!--[if lte IE 8]>
+<body class="ite">
+<p class="chromeframe">亲，浏览器版本过低，换一个吧！<a href="http://windows.microsoft.com/" target="_blank">升级您的IE浏览器</a>，或使用<a href="http://www.google.cn/intl/zh-CN/chrome/" target="_blank">Google Chrome</a>、<a href="http://www.firefox.com.cn/download/" target="_blank">Firefox</a>等高级浏览器。</p>
+<![endif]-->
+<div class="wrap">
+	<div class="main_wrap">
+		<!-- 好友 -->
+		<div class="main_public show">
+			<div class="friends_Wrap">
+				<div class="friBtn_box clearfloat">
+					<a href="javascript:;" class="active">我的好友</a>
+					<a href="javascript:;">据点好友</a>
+					<a href="javascript:;">附近的人</a>
+					<a href="javascript:;">找朋友</a>
+				</div>
+				<div class="fri_box">
+					<!-- 我的好友 -->
+					<div class="fri_part show">
+						<div class="selFri clearfloat">
+							<a href="javascript:;" class="active">全部好友</a>
+							<a href="javascript:;">游戏好友</a>    
+							<a href="javascript:;">其他好友</a> 
+						</div>
+						<ul class="fri_list">
+							<li>
+								<a href="http:www.baidu.com">
+									<span class="firpic"><img src="images/fripic.png" /></span>
+									<span class="per_tips">
+										<!-- per_woman女  per_man男 -->
+										<p class="perName">胖胖的猪头胖胖的猪头胖胖的猪头<i class="per_woman"></i></p>
+										<p>军衔：<i>中尉</i></p>
+										<p>称号：<i>重坦大师</i></p>
+										<p>战区：<i>北京市海淀区</i></p>
+										<p>大区：<i>南方电信区</i></p>
+									</span>
+									<span class="carGo"></span>
+								</a>
+								<span class="fir_ico">
+									<em class="chat" onclick="ChatTips.showChat();"></em>
+									<!-- 礼物：gift 赠送礼物后gift_dark -->
+									<em class="gift" onclick="Tips.showFriTips();"></em>
+									<em class="delete" onclick="Tips.showDelete();"></em>
+								</span>
+							</li>
+							<li>
+								<a href="javascript:;">
+									<span class="firpic"><img src="images/fripic.png" /></span>
+									<span class="per_tips">
+										<!-- per_woman女  per_man男 -->
+										<p class="perName">胖胖的猪头<i class="per_woman"></i></p>
+										<p>军衔：<i>中尉</i></p>
+										<p>称号：<i>重坦大师</i></p>
+										<p>战区：<i>北京市海淀区北京市海淀区</i></p>
+										<p>大区：<i>南方电信区</i></p>
+									</span>
+									<span class="fir_ico">
+										<em class="chat" onclick="Tips.showChat();"></em>
+										<!-- 礼物：gift 赠送礼物后gift_dark -->
+										<em class="gift_dark"></em>
+										<em class="delete"></em>
+									</span>
+									<span class="carGo"></span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;">
+									<span class="firpic"><img src="images/fripic.png" /></span>
+									<span class="per_tips">
+										<!-- per_woman女  per_man男 -->
+										<p class="perName">胖胖的猪头<i class="per_woman"></i></p>
+										<p>军衔：<i>中尉</i></p>
+										<p>称号：<i>重坦大师</i></p>
+										<p>战区：<i>北京市海淀区</i></p>
+										<p>大区：<i>南方电信区</i></p>
+									</span>
+									<span class="fir_ico">
+										<em class="chat" onclick="Tips.showChat();"></em>
+										<!-- 礼物：gift 赠送礼物后gift_dark -->
+										<em class="gift"></em>
+										<em class="delete"></em>
+									</span>
+									<span class="carGo"></span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;">
+									<span class="firpic"><img src="images/fripic.png" /></span>
+									<span class="per_tips">
+										<!-- per_woman女  per_man男 -->
+										<p class="perName">胖胖的猪头<i class="per_man"></i></p>
+										<p>军衔：<i>中尉</i></p>
+										<p>称号：<i>重坦大师</i></p>
+										<p>战区：<i>北京市海淀区</i></p>
+										<p>大区：<i>南方电信区</i></p>
+									</span>
+									<span class="fir_ico">
+										<em class="chat" onclick="Tips.showChat();"></em>
+										<!-- 礼物：gift 赠送礼物后gift_dark -->
+										<em class="gift_dark"></em>
+										<em class="delete"></em>
+									</span>
+									<span class="carGo"></span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;">
+									<span class="firpic"><img src="images/fripic.png" /></span>
+									<span class="per_tips">
+										<!-- per_woman女  per_man男 -->
+										<p class="perName">胖胖的猪头<i class="per_man"></i></p>
+										<p>军衔：<i>中尉</i></p>
+										<p>称号：<i>重坦大师</i></p>
+										<p>战区：<i>北京市海淀区</i></p>
+										<p>大区：<i>南方电信区</i></p>
+									</span>
+									<span class="fir_ico">
+										<em class="chat" onclick="Tips.showChat();"></em>
+										<!-- 礼物：gift 赠送礼物后gift_dark -->
+										<em class="gift_dark"></em>
+										<em class="delete"></em>
+									</span>
+									<span class="carGo"></span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;">
+									<span class="firpic"><img src="images/fripic.png" /></span>
+									<span class="per_tips">
+										<!-- per_woman女  per_man男 -->
+										<p class="perName">胖胖的猪头<i class="per_man"></i></p>
+										<p>军衔：<i>中尉</i></p>
+										<p>称号：<i>重坦大师</i></p>
+										<p>战区：<i>北京</i></p>
+										<p>大区：<i>南方电信区</i></p>
+									</span>
+									<span class="fir_ico">
+										<em class="chat" onclick="Tips.showChat();"></em>
+										<!-- 礼物：gift 赠送礼物后gift_dark -->
+										<em class="gift_dark"></em>
+										<em class="delete"></em>
+									</span>
+									<span class="carGo"></span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;">
+									<span class="firpic"><img src="images/fripic.png" /></span>
+									<span class="per_tips">
+										<!-- per_woman女  per_man男 -->
+										<p class="perName">胖胖的猪头<i class="per_man"></i></p>
+										<p>军衔：<i>中尉</i></p>
+										<p>称号：<i>重坦大师</i></p>
+										<p>战区：<i>北京市海淀区</i></p>
+										<p>大区：<i>南方电信区</i></p>
+									</span>
+									<span class="fir_ico">
+										<em class="chat" ></em>
+										<!-- 礼物：gift 赠送礼物后gift_dark -->
+										<em class="gift_dark"></em>
+										<em class="delete"></em>
+									</span>
+									<span class="carGo"></span>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<!-- 据点好友 -->
+					<div class="fri_part">
+						<ul class="fri_list">
+							<li>
+								<a href="http://www.baidu.com">
+									<span class="firpic"><img src="images/fripic.png" /></span>
+									<span class="per_tips">
+										<!-- per_woman女  per_man男 -->
+										<p class="perName">胖胖的猪头<i class="per_woman"></i></p>
+										<p>军衔：<i>中尉</i></p>
+										<p>称号：<i>重坦大师</i></p>
+										<p>战区：<i>北京市海淀区</i></p>
+										<p>大区：<i>南方电信区</i></p>
+									</span>
+									<span class="carGo"></span>
+								</a>
+								<span class="holdFri_add">
+									<em class="addFri addMargin" onclick="Tips.showAddFri();"></em>
+								</span>
+							</li>
+							<li>
+								<a href="javascript:;">
+									<span class="firpic"><img src="images/fripic.png" /></span>
+									<span class="per_tips">
+										<!-- per_woman女  per_man男 -->
+										<p class="perName">胖胖的猪头<i class="per_woman"></i></p>
+										<p>军衔：<i>中尉</i></p>
+										<p>称号：<i>重坦大师</i></p>
+										<p>战区：<i>北京市海淀区</i></p>
+										<p>大区：<i>南方电信区</i></p>
+									</span>
+									<span class="holdFri_add">
+										<em class="addFri addMargin" onclick="Tips.showAddFri();"></em>
+									</span>
+									<span class="carGo"></span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;">
+									<span class="firpic"><img src="images/fripic.png" /></span>
+									<span class="per_tips">
+										<!-- per_woman女  per_man男 -->
+										<p class="perName">胖胖的猪头<i class="per_woman"></i></p>
+										<p>军衔：<i>中尉</i></p>
+										<p>称号：<i>重坦大师</i></p>
+										<p>战区：<i>北京市海淀区</i></p>
+										<p>大区：<i>南方电信区</i></p>
+									</span>
+									<span class="holdFri_add">
+										<em class="addFri addMargin" onclick="Tips.showAddFri();"></em>
+									</span>
+									<span class="carGo"></span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;">
+									<span class="firpic"><img src="images/fripic.png" /></span>
+									<span class="per_tips">
+										<!-- per_woman女  per_man男 -->
+										<p class="perName">胖胖的猪头<i class="per_woman"></i></p>
+										<p>军衔：<i>中尉</i></p>
+										<p>称号：<i>重坦大师</i></p>
+										<p>战区：<i>北京市海淀区</i></p>
+										<p>大区：<i>南方电信区</i></p>
+									</span>
+									<span class="holdFri_add">
+										<em class="addFri addMargin" onclick="Tips.showAddFri();"></em>
+									</span>
+									<span class="carGo"></span>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<!-- 附近的人 -->
+					<div class="fri_part">
+						<ul class="fri_list">
+							<li>
+								<a href="https://www.baidu.com">
+									<span class="firpic"><img src="images/fripic.png" /></span>
+									<span class="per_tips">
+										<!-- per_woman女  per_man男 -->
+										<p class="perName">长灬发灬大灬流灬氓</p>
+										<p>军衔：<i>中尉</i></p>
+										<p>称号：<i>重坦大师</i></p>
+										<p>战区：<i>北京市海淀区</i></p>
+										<p>大区：<i>南方电信区</i></p>
+									</span>
+									<span class="carGo"></span>
+								</a>
+								<span class="holdFri_add">
+									<em>38米</em>
+									<em class="addFri" onclick="ChatTips.showAddRequ();"></em>
+								</span>
+							</li>
+							<li>
+								<a href="javascript:;">
+									<span class="firpic"><img src="images/fripic.png" /></span>
+									<span class="per_tips">
+										<!-- per_woman女  per_man男 -->
+										<p class="perName">___北区第一大帅逼___</p>
+										<p>军衔：<i>中尉</i></p>
+										<p>称号：<i>重坦大师</i></p>
+										<p>战区：<i>北京市海淀区</i></p>
+										<p>大区：<i>南方电信区</i></p>
+									</span>
+									<span class="carGo"></span>
+								</a>
+								<span class="holdFri_add">
+									<em>560000米</em>
+									<em class="addFri" onclick="Tips.showAddFri();"></em>
+								</span>
+							</li>
+							<li>
+								<a href="javascript:;">
+									<span class="firpic"><img src="images/fripic.png" /></span>
+									<span class="per_tips">
+										<!-- per_woman女  per_man男 -->
+										<p class="perName">胖胖的猪头<i class="per_woman"></i></p>
+										<p>军衔：<i>中尉</i></p>
+										<p>称号：<i>重坦大师</i></p>
+										<p>战区：<i>北京市海淀区</i></p>
+										<p>大区：<i>南方电信区</i></p>
+									</span>
+									<span class="holdFri_add">
+										<em>1000米</em>
+										<em class="addFri" onclick="Tips.showAddFri();"></em>
+									</span>
+									<span class="carGo"></span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;">
+									<span class="firpic"><img src="images/fripic.png" /></span>
+									<span class="per_tips">
+										<!-- per_woman女  per_man男 -->
+										<p class="perName">胖胖的猪头<i class="per_woman"></i></p>
+										<p>军衔：<i>中尉</i></p>
+										<p>称号：<i>重坦大师</i></p>
+										<p>战区：<i>北京市海淀区</i></p>
+										<p>大区：<i>南方电信区</i></p>
+									</span>
+									<span class="holdFri_add">
+										<em>1000米</em>
+										<em class="addFri" onclick="Tips.showAddFri();"></em>
+									</span>
+									<span class="carGo"></span>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<!-- 找朋友 -->
+					<div class="fri_part">
+						<div class="lookFri_box">
+							<div class="lookForm">
+								<form>
+									<span class="s_fri_wr">
+										<input type="text" class="s_ipt" name="wd"  maxlength="100" autocomplete="off" placeholder='请输入您要查找的玩家昵称'>
+									</span>
+									<span class="s_fri_btn">
+										<input type="submit" class="searchBtn" value="">
+									</span>
+								</form>
+							</div>
+							<div class="searchBox clearfloat">
+								<dl class="c_editor clearfloat">
+									<dd>
+										<label for="">军　衔</label>
+										<div class="searchFri">   
+											<select>
+												<option value="0">请选泽</option>
+												<option value="1">中尉1中尉1中尉1中尉1中尉1</option>
+												<option value="2">中尉2</option>
+											</select>
+											<!-- <input type='hidden' class='sel-ed'  validate='true' value=''> -->
+										</div>
+									</dd>
+									<dd>
+										<label>坦　克</label>
+										<div class="searchFri">    
+											<select>    
+												<option value="0">请选择坦克</option>
+												<option value="1">轻型坦克</option>    
+												<option value="2">重型坦克</option>
+											</select>
+											<input type='hidden' class='sel-ed'  validate='true' value=''>
+										</div>
+									</dd>
+									<dd>
+										<label>大　区</label>
+										<div class="searchFri">    
+											<select>    
+												<option value="0">请选择大区</option>
+												<option value="1">电信男方区</option>    
+												<option value="2">联通北方区</option>
+											</select>
+											<input type='hidden' class='sel-ed'  validate='true' value=''>
+										</div>
+									</dd>
+								</dl>
+								<div data-toggle="distpicker" class="se_picker fl">
+									<label class="sr_label" for="province1">战区:</label>
+								  	<div class="sr_group">
+								  		<select></select>
+								  	</div>
+								  	<div class="sr_group">
+								  		<select></select>
+								  	</div>
+								  	<div class="sr_group">
+								  		<select></select>
+								  	</div>
+								</div>
+								<div class="queryBox"><a href="javascript:;" clas="">查　询</a></div>
+							</div>
+						</div>
+						<ul class="fri_list">
+							<li>
+								<a href="http://www.baidu.com">
+									<span class="firpic"><img src="images/fripic.png" /></span>
+									<span class="per_tips">
+										<!-- per_woman女  per_man男 -->
+										<p class="perName">胖胖的猪头<i class="per_woman"></i></p>
+										<p>军衔：<i>中尉</i></p>
+										<p>称号：<i>重坦大师</i></p>
+										<p>战区：<i>北京市海淀区</i></p>
+										<p>大区：<i>南方电信区</i></p>
+									</span>
+									<span class="carGo"></span>
+								</a>
+								<span class="holdFri_add">
+									<em>38米</em>
+									<em class="addFri" onclick="Tips.showAddFri();"></em>
+								</span>
+							</li>
+							<li>
+								<a href="javascript:;">
+									<span class="firpic"><img src="images/fripic.png" /></span>
+									<span class="per_tips">
+										<!-- per_woman女  per_man男 -->
+										<p class="perName">胖胖的猪头<i class="per_woman"></i></p>
+										<p>军衔：<i>中尉</i></p>
+										<p>称号：<i>重坦大师</i></p>
+										<p>战区：<i>北京市海淀区</i></p>
+										<p>大区：<i>南方电信区</i></p>
+									</span>
+									<span class="holdFri_add">
+										<em>560米</em>
+										<em class="addFri" onclick="Tips.showAddFri();"></em>
+									</span>
+									<span class="carGo"></span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;">
+									<span class="firpic"><img src="images/fripic.png" /></span>
+									<span class="per_tips">
+										<!-- per_woman女  per_man男 -->
+										<p class="perName">胖胖的猪头<i class="per_woman"></i></p>
+										<p>军衔：<i>中尉</i></p>
+										<p>称号：<i>重坦大师</i></p>
+										<p>战区：<i>北京市海淀区</i></p>
+										<p>大区：<i>南方电信区</i></p>
+									</span>
+									<span class="holdFri_add">
+										<em>1000米</em>
+										<em class="addFri" onclick="Tips.showAddFri();"></em>
+									</span>
+									<span class="carGo"></span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;">
+									<span class="firpic"><img src="images/fripic.png" /></span>
+									<span class="per_tips">
+										<!-- per_woman女  per_man男 -->
+										<p class="perName">胖胖的猪头<i class="per_woman"></i></p>
+										<p>军衔：<i>中尉</i></p>
+										<p>称号：<i>重坦大师</i></p>
+										<p>战区：<i>北京市海淀区</i></p>
+										<p>大区：<i>南方电信区</i></p>
+									</span>
+									<span class="holdFri_add">
+										<em>1000米</em>
+										<em class="addFri" onclick="Tips.showAddFri();"></em>
+									</span>
+									<span class="carGo"></span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 底部导航 -->
+	<div class="fixed_wrap">
+		<a href="map.html" class="fix_btn1 "><i></i>地图</a>
+		<a href="message.html" class="fix_btn2"><i></i>消息</a>
+		<a href="ranking.html" class="fix_btn3"><i></i>排行</a>
+		<a href="friend.html" class="fix_btn4 active"><i></i>好友</a>
+		<a href="myCenter.html" class="fix_btn5"><i></i>我的</a>
+	</div>
+</div>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/style.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript" src="js/distpicker.data.js"></script>
+<script type="text/javascript" src="js/distpicker.js"></script>
+<script type="text/javascript" src="js/chat.js"></script>
+<script type="text/javascript">
+	//省、市、区三级联动
+	//通过以下代码来修改全局默认参数
+	$.fn.distpicker.setDefaults({
+	  	autoSelect:false  //是否当省改变时自动选择市和区
+	})
+	 //var bfscrolltop = document.body.scrollTop;//获取软键盘唤起前浏览器滚动部分的高度
+	// var availHeight=window.screen.availHeight/5;
+	$(document).on('focus','.chat_area',function(){
+		//var viewTop = $(window).scrollTop();            // 可视区域顶部
+		//var viewBottom = viewTop + window.innerHeight;  // 可视区域底部
+		//var elementTop = $('#alertInfo').offset().top // $element是保存的input
+		//var elementBottom = elementTop + $('#alertInfo').height();
+		//$('#alertInfo').css('top',availHeight)
+		/*var _winHResize=$(window).height();  //屏幕高度
+		var _scrollTopResize=$(document).scrollTop();//滚动高度
+		var _thisDomHeightResize=$("#alertInfo").outerHeight();//内容高度
+		var topResize1=parseInt(_scrollTopResize+(_winHResize-_thisDomHeightResize)/4);
+		$('#alertInfo').css('marginTop',-topResize1)*/
+
+		//window.setTimeout(function() {
+        //        document.activeElement.scrollIntoViewIfNeeded();
+         //   },0);
+		/*var $this = $(this);  
+       e.preventDefault();  
+       setTimeout(function(){  
+           $(window).scrollTop($this.offset().top-10 );  
+           console.log($this.offset().top)
+       },200)  */
+		/*var target=this;
+		setTimeout(function(){
+			target.scrollIntoView(true);//跑到顶部了
+		},100);*/
+		// console.log(document.body.scrollTop)
+		//interval=setInterval(function(){
+			//test.scrollIntoViewIfNeeded(true)
+			//document.body.scrollByLines(5);
+			//document.body.scrollTop = document.body.scrollHeight-200;//
+			//获取焦点后将浏览器内所有内容高度赋给浏览器滚动部分高度
+		//},100)
+	}).on('blur','.chat_area',function(){
+		var topResize2=parseInt(_scrollTopResize+(_winHResize-_thisDomHeightResize)/2);
+		$('#alertInfo').css('marginTop',-topResize2)
+		//clearInterval(interval);//清除计时器
+		//document.body.scrollTop = bfscrolltop;//将软键盘唤起前的浏览器滚动部分高度重新赋给改变后的高度
+	})
+	
+</script>
+<div style="display:none"><script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_2492438'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s13.cnzz.com/stat.php%3Fid%3D2492438' type='text/javascript'%3E%3C/script%3E"));</script></div>
+</body>
+
+</html>

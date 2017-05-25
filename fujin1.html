@@ -1,0 +1,180 @@
+<!doctype html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
+
+    <style type="text/css">
+      body,html,#container{
+        height: 99%;
+        margin: 0px;
+      }
+    </style>
+    <style type="text/css">
+        .mapIco{font-size:0.2rem;width:1.7rem;}
+        .mapIco_pic{overflow: hidden;width:1rem;height:1rem;font-size:0.2rem;color:#fff;position:relative;z-index:3;text-align:center;border:1px solid #1771dc;border-radius:50%;margin: 0 auto;}
+        .mapIco_img{width:100%;height:100%;}
+        .mapIco_img img,.myself img,.stronghold img{width:100%;display:block;margin:0 auto;border-radius:50%;}
+        .mapIco_level{width:100%;text-align:center;position:absolute;left:0;bottom:0;background:#000;}
+        .mapIco_info{font-size:0.2rem;color:#000;background:#fefefe;min-width:1.7rem;padding:0.05rem 0.05rem;}
+        .mapIco_info p:first-child{font-size:0.3rem;color:#333333;font-weight:bold;}
+        .info {
+            border: solid 1px silver;
+            /*background: url("http://wot.kongzhong.com/style/newindex/images/newsBG.jpg") no-repeat;*/
+            background: none repeat scroll 0 0 #333333;
+        }
+        div.info-top {
+            position: relative;
+            /*background: none repeat scroll 0 0 #F9F9F9;*/
+            border-bottom: 1px solid #CCC;
+            border-radius: 5px 5px 0 0;
+        }
+        div.info-top div {
+            display: inline-block;
+            color: #ffffff;
+            font-size: 14px;
+            font-weight: bold;
+            line-height: 31px;
+            padding: 0 10px;
+        }
+        div.info-top img {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            transition-duration: 0.25s;
+        }
+        div.info-top img:hover {
+            box-shadow: 0px 0px 5px #000;
+        }
+        div.info-middle {
+            font-size: 14px;
+            padding: 6px;
+            line-height: 24px;
+
+        }
+        div.info-middle ol{
+        	margin:0px;  
+        	padding: 0 10px;
+        	list-style-type:none;
+        	/*counter-reset:sectioncounter;*/
+        }
+        div.info-middle li{
+        	list-style-position:outside;
+        }
+        div.info-middle li:before {  
+		   /* content:counter(sectioncounter) "ã";   
+		    counter-increment:sectioncounter;  */
+		}
+
+        div.info-bottom {
+            height: 0px;
+            width: 100%;
+            clear: both;
+            text-align: center;
+        }
+        div.info-bottom img {
+            position: relative;
+            z-index: 104;
+        }
+        span {
+            margin-left: 5px;
+            font-size: 11px;
+        }
+        .info-middle img {
+            float: left;
+            margin-right: 6px;
+        }
+    </style>
+    <title>身边的大神们</title>
+  </head>
+  <body>
+    <div id="container" tabindex="0"></div>
+    <!-- 其他人 -->
+    <div style="display: none;">
+        <div class="mapIco" id="myIcon">
+            <div class="mapIco_pic">
+                <p class="mapIco_img"><img src="images/mapico1.png" /></p>
+                <p class="mapIco_level">中将</p>
+            </div>
+            <div class="mapIco_info">
+                <p>胖胖的猪头</p>
+                <p>海淀第一[IS-7]</p>
+            </div>
+        </div>
+    </div>
+    <!-- 自己人 -->
+    <div style="display: none;">
+        <div class="myselfBg" id="myslfBg"><span class="myself"><img src="images/myself.png" /></span></div>
+    </div>
+   	<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="http://webapi.amap.com/maps?v=1.3&key=2da793b07ba629ba5cd7814437e92a9a"></script>
+       <script src="//webapi.amap.com/ui/1.0/main.js"></script>
+    <script type="text/javascript">
+        ~function (d, w) {
+                var docEl = d.documentElement,resizeEvt = 'orientationchange' in w ? 'orientationchange' : 'resize',
+                recalc = function () {
+                var clientWidth = docEl.clientWidth;
+                if (!clientWidth) return;
+                docEl.style.fontSize = 100 * (clientWidth / 640) + 'px';
+                };
+                if (!d.addEventListener) return;
+                recalc();
+                w.addEventListener(resizeEvt, recalc, false);
+                d.addEventListener('DOMContentLoaded', recalc, false);
+        }(document, window);
+    </script>
+    <script type="text/javascript">
+        //创建地图
+        var map = new AMap.Map('container', {
+            zoom: 4
+        });
+
+        AMapUI.loadUI(['overlay/SimpleInfoWindow','overlay/SimpleMarker'], function(SimpleInfoWindow,SimpleMarker) {
+        	console.log(SimpleMarker)
+        	var test=new SimpleMarker({
+        	     iconStyle: '<div style="background:red;width:20px;height:60px;"></div>',
+        	     //设置基点偏移
+        	     offset: new AMap.Pixel(-60, -50),
+        	     location: "116.368904, 39.913423",
+        	     map: map
+        	 });
+            var infoWindow = new SimpleInfoWindow({
+
+                infoTitle: '<strong>点击这里</strong>',
+
+                infoBody: '<p class="my-desc">点击这里</p><button class="mybtn">点击这里</button>',
+
+                //基点指向marker的头部位置
+                offset: new AMap.Pixel(0, -31)
+            });
+
+            infoWindow.get$Container().on('click', function(event) {
+
+                alert('Click infoWindow');
+            });
+
+            infoWindow.get$InfoTitle().on('click', function(event) {
+
+                //阻止冒泡
+                event.stopPropagation();
+
+                alert('Click infoTitle');
+
+            });
+
+            infoWindow.get$InfoBody().on('click', '.mybtn', function(event) {
+
+                //阻止冒泡
+                event.stopPropagation();
+
+                alert('Click .mybtn of infoBody');
+
+            });
+            test.on('click',function(){
+            	infoWindow.open(map, map.getCenter());
+            })
+           // infoWindow.open(map, map.getCenter());
+
+        });
+        </script>
+</body>
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>《坦克世界》</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="keywords" content="《坦克世界》">
+<meta name="description" content="《坦克世界》">
+<meta name="full-screen" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="format-detection" content="address=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta http-equiv="Expires" content="-1">
+<meta http-equiv="Cache-Control" content="no-cache">
+<meta http-equiv="Pragma" content="no-cache">
+<link rel="icon" href="http://wot.kongzhong.com/images/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="http://wot.kongzhong.com/images/favicon.ico" type="image/x-icon">
+<link rel="bookmark" href="http://wot.kongzhong.com/images/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" type="text/css" href="css/croll.css">
+<link rel="stylesheet" type="text/css" href="css/jquery.mCustomScrollbar.css">
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/rem.js"></script>
+<link type="text/css" rel="stylesheet" href="css/com.css">
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+</head>
+
+<body>
+<!--[if lte IE 8]>
+<body class="ite">
+<p class="chromeframe">亲，浏览器版本过低，换一个吧！<a href="http://windows.microsoft.com/" target="_blank">升级您的IE浏览器</a>，或使用<a href="http://www.google.cn/intl/zh-CN/chrome/" target="_blank">Google Chrome</a>、<a href="http://www.firefox.com.cn/download/" target="_blank">Firefox</a>等高级浏览器。</p>
+<![endif]-->
+<div class="wrap">
+	<div class="main_wrap">
+		<!-- 地图 -->
+		<div class="main_public show">
+			<!-- 地图容器 -->
+			<div class="mapBox" id="container"></div>
+			<!-- 其他人 -->
+			<div style="display: none;">
+				<div class="mapIco" id="myIcon">
+					<div class="mapIco_pic">
+						<p class="mapIco_img"><img src="https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=381588226,2100450730&fm=80&w=179&h=119&img.PNG" /></p>
+						<p class="mapIco_level">中将</p>
+					</div>
+					<div class="mapIco_info">
+						<p>胖胖的猪头</p>
+						<p>海淀</p>
+					</div>
+				</div>
+			</div>
+			<!-- 自己人 -->
+			<div style="display: none;">
+				<div class="myselfBg" id="myslfBg"><span class="myself"><img src="https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=381588226,2100450730&fm=80&w=179&h=119&img.PNG" /></span></div>
+			</div>
+			<!-- 据点 -->
+			<div style="display: none;">
+				<div class="stronghold"  id="stronghold">
+					<p>腾达大厦</p>
+					<span class="jdImg"><img src="images/stronghold.png" /></span>
+				</div>
+			</div>
+			<!-- 战区 -->
+			<div class="warZone" onclick="Tips.showWarZone();">
+				<span class="warZone_s1">我的战区：</span>
+				<span class="warZone_s2">西直门大街168号腾达大厦</span>
+				<span class="warZone_line"></span>
+				<span class="warZone_s3"></span>
+			</div>
+			<!-- 战区人数 -->
+			<div class="warPernum">
+				<p>战区人数：250000</p>
+			</div>
+			<!-- 复位 -->
+			<div class="reset"><a href="javascript:;" class="resetBtn"></a></div>
+		</div>
+	</div>
+	<!-- 底部导航 -->
+	<div class="fixed_wrap">
+		<a href="map.html" class="fix_btn1 active"><i></i>地图</a>
+		<a href="message.html" class="fix_btn2"><i></i>消息</a>
+		<a href="ranking.html" class="fix_btn3"><i></i>排行</a>
+		<a href="friend.html" class="fix_btn4"><i></i>好友</a>
+		<a href="myCenter.html" class="fix_btn5"><i></i>我的</a>
+	</div>
+</div>
+<!-- 指引 -->
+<div class="guideOpa"></div>
+ <div class="guideBox">
+	<!-- <div class="guide1">
+		<div class="g_con"></div>
+		<div class="g_btnBox"><a href="javascript:tips(2);" class="g_btn"></a></div>
+	</div>
+	<div class="guide2">
+		<div class="g_btnBox2"><a href="javascript:tips(3);" class="g_btn1"></a></div>
+		<div class="g_con2"></div>
+	</div> -->
+	<div class="guide3">
+		<div class="g_con3">
+			<div class="warZone">
+				<span class="warZone_s1">我的战区：</span>
+				<span class="warZone_s2"></span>
+				<span class="warZone_line"></span>
+				<span class="warZone_s3"></span>
+			</div>
+		</div>
+		<div class="g_btnBox3"><a href="javascript:closeTips();" class="g_btn2"></a></div>
+	</div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){
+  	var clientH=window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+  	var fixHeight=$('.fixed_wrap').height();
+  	var availHeight=clientH-fixHeight;
+  		$('.mapBox').css('height',availHeight)
+});
+
+</script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/style.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript" src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script type="text/javascript" src="http://webapi.amap.com/maps?v=1.3&key=edc9975ee530208ccb012d71ccb80aa2"></script>
+<script src="http://webapi.amap.com/ui/1.0/main.js"></script>
+<script type="text/javascript" src="js/map.js"></script>
+<script type="text/javascript" src="js/swiper.min.js"></script>
+<script type="text/javascript" src="js/guideM.js"></script>
+<div style="display:none"><script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_2492438'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s13.cnzz.com/stat.php%3Fid%3D2492438' type='text/javascript'%3E%3C/script%3E"));</script></div>
+</body>
+
+<!-- 据点弹窗 -->
+<div class="overOpa"></div>
+<div class="holdArea">
+	<span class="close" onclick="Tips.hideHold();"></span>
+	<div class="hold_part1">
+		<div class="p1Bg">
+			<h2>海淀网鱼网咖</h2>
+			<p>地址： 北京市西城区西直门外大街癸143-2</p>
+			<p>电话：13801139126</p>
+		</div>
+	</div>
+	<div class="hold_part2">
+		<!-- 轮播图 -->
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<img src="images/hold_img.jpg" />
+				</div>
+				<div class="swiper-slide">
+					<img src="images/hold_img1.jpg" />
+				</div>
+				<div class="swiper-slide">
+					<img src="images/hold_img.jpg" />
+				</div>
+				<div class="swiper-slide">
+					<img src="images/hold_img1.jpg" />
+				</div>
+			</div>
+			<div class="swiper-pagination"></div>
+		</div>
+	</div>
+	<div class="hold_part3 ">
+		<h2>俱乐部热门活动</h2>
+		<div class="hold_table mCustomScrollbar _mCS_1">
+			<table class="">
+				<tr>
+					<td>里克圣诞节来阿里看似简单了看见</td>
+					<td>2017.04.12</td>
+				</tr>
+				<tr>
+					<td>里克圣诞节来阿里看似简单了看见</td>
+					<td>2017.04.12</td>
+				</tr>
+				<tr>
+					<td>里克圣诞节来阿里看似简单了看见</td>
+					<td>2017.04.12</td>
+				</tr>
+				<tr>
+					<td>里克圣诞节来阿里看似简单了看见</td>
+					<td>2017.04.12</td>
+				</tr>
+				<tr>
+					<td>里克圣诞节来阿里看似简单了看见</td>
+					<td>2017.04.12</td>
+				</tr>
+				<tr>
+					<td>里克圣诞节来阿里看似简单了看见</td>
+					<td>2017.04.12</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<!-- 关注之后 灰色按钮  focus_alr-->
+	<div class="hold_part4"><a href="javascript:;" class="focus_alr">关注</a></div>
+</div>
+<script type="text/javascript">
+		//轮播
+		
+	$(document).ready(function () {
+	 	$('.warPernum').on('click',function(){
+	 		Tips.showHold();
+	 		showMapLoop()  //需要弹窗时再调用此轮播函数
+	 	})
+	})
+
+	function showMapLoop(){
+		if($('.holdArea').is(":visible")){
+			var swiper=new Swiper('.swiper-container',{
+				initiaSlide:1,
+				speed:500,
+				autoplay:2000,
+				autoplayDisableOnInteraction : false,
+				pagination:'.swiper-pagination',  	//进度条
+				slidesPerView:1,					//一页显示几张
+				loop:true,  					 		//无限循环
+				paginationClickable :true,
+				observer:true,           //修改swiper自己或子元素时，自动初始化swiper
+				observeParents:true     //修改swiper的父元素时，自动初始化swiper
+			})
+		}
+	}
+</script>
+</html>
+ 

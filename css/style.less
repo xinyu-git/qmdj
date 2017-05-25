@@ -1,0 +1,156 @@
+.view{.display;.flex-direction(column);width:100%;height:13.34rem;background:url(../images/combg.jpg) no-repeat center;background-size:100% 100%;overflow: hidden;}
+.top_fixed{width:100%;top:0;left:0;}
+.bottom_fixed{width:100%;bottom:0;left:0;}
+.mes_btn{height:0.8rem;.display;.justify-content(center);.align-items(center);background:#060606;border-bottom:1px solid #333333;}
+.mes_btn a{width:1.6rem;height:0.45rem;color:#888888;font-size:0.3rem;text-align: center;line-height:0.45rem; margin:0 0.2rem;position:relative;}
+.mes_btn a.active{border:1px solid #ff9725;border-radius:0.2rem 0.2rem;color:#ff9725;}
+.mes_btn a i{width: 0.15rem;height:0.15rem;border-radius:50%;background:#ff8a00;position:absolute;right:0rem;top:0rem;display:none;}
+.mes_btn a.newsActive i{display:block;}
+.line{width:1px;height:0.4rem;background:url(../images/line.png) no-repeat center;background-size: 100% 100%;}
+.mes_editor{height:0.8rem;font-size:0.3rem;color:#cccccc;}
+.edit_normal{.display;.justify-content(flex-end);.align-items(center);height:100%;}
+.edit_normal a{.display;.align-items(center);margin-right: 0.16rem;}
+.edit_normal a i{margin:0 0.1rem;}
+.edit_ico{width:0.35rem;height:0.24rem;background:url(../images/edit_ico.png) no-repeat center;background-size:100% 100%;}
+.edit_choose{.display;.align-items(center);.justify-content(space-between);height:100%;padding:0 0.3rem;font-size:0.3rem;color:#cccccc;}
+.edit_choose input{cursor:pointer;outline:none;background:none;font-size:0.3rem;color:#cccccc;border:none;display:block;}
+.edit_choose a{cursor:pointer;}
+.mes_editor.edit_false .edit_choose{display:none;}
+.mes_editor.edit_true .edit_normal{display:none;}
+.scroll_wrap{.display;width:100%;position: relative;.flex(1);/* display:block;overflow: hidden; */height:100%;}
+.scroll_content{width:100%;.display;overflow:auto;/* winphone8和android4+ */-webkit-overflow-scrolling: touch; /* ios5+ */.flex(1);}
+.mes_list{width:100%;}
+.mes_list li{width:100%;height:1.15rem;border-bottom:1px solid #333333;background:#0e0e0e;font-size:0.3rem;color:#fff;.display;.align-items(center);.justify-content(space-around);}
+.unread,.read{width:0.48rem;height:0.3rem;background:url(../images/read_s.png) no-repeat 0 0;background-size:0.48rem 0.8rem;}
+.read{height:0.48rem;background-position:0 -0.31rem;}
+.mes_des{font-size:0.22rem;color:#888888;width:4.7rem;overflow: hidden;text-overflow:ellipsis;word-wrap:break-word;white-space:nowrap;}
+.mes_title{.display;.justify-content(space-between);.align-items(center);}
+.mes_tit{width:3.6rem;.omit;}
+.mes_delete{width:0.39rem;height:0.47rem;background:url(../images/mes_delete.png) no-repeat center;background-size:100%;cursor:pointer;}
+.mes_checkbox{display:none;}
+.mes_checkbox+label{width:0.36rem;height:0.36rem;border:1px solid #858585;border-radius:50%;position:relative;display:block;background:#060606;}
+.mes_checkbox:checked+label:before{content:'';width:0.36rem;height:0.36rem;border-radius:50%;background:url(../images/checked.png) no-repeat center #ff9725;background-size:0.27rem 0.18rem;position:absolute;left:50%;top:50%;margin-left:-0.18rem;margin-top:-0.18rem;}
+.choose_box{/* width:0;transition:width 0.4s ease-in;-webkit-transition:width 0.4s ease-in */;}
+.mes_list li.delete_false .choose_box{display:none;}
+.mes_list li.delete_true .mes_delete{display:none;}
+.checkAll_delete{width:100%;height:0.98rem;background:url(../images/delete1.png) no-repeat center;background-size:100% 100%;/* transform: translate(0rem,0.9rem); */display:none;}
+.checkAll_delete a{display:block;width:100%;height:100%;cursor:pointer;}
+
+
+/*底部导航*/
+.bottom_fixed footer{.display;.justify-content(space-between);.align-content(center);height:0.96rem;border-top:1px solid #333333;}
+.bottom_fixed footer a{display:block;.flex(1);box-sizing:border-box;text-align:center;font-size:0.22rem;color:#eeeeee;}
+.bottom_fixed footer a i{display:block;height:0.39rem;margin:0.1rem auto 0.02rem;width:0.41rem;}
+.fix_btn1 i{background:url(../images/fixpic_s1.png) no-repeat;background-size:0.41rem 0.8rem;background-position: 0 0;}
+.fixed_wrap a.active{color:#ff9000;}
+.fix_btn1.active i{background-position: 0 -0.4rem;}
+.fix_btn2 i{background:url(../images/fixpic_s2.png) no-repeat center;background-size:0.41rem 0.8rem;background-position: 0 0;}
+.fix_btn2.active i{background-position: 0 -0.4rem;}
+.fix_btn3 i{background:url(../images/fixpic_s3.png) no-repeat center;background-size:0.41rem 0.8rem;background-position: 0 0;}
+.fix_btn3.active i{background-position: 0 -0.4rem;}
+.fix_btn4 i{background:url(../images/fixpic_s4.png) no-repeat center;background-size:0.41rem 0.8rem;background-position: 0 0;}
+.fix_btn4.active i{background-position: 0 -0.4rem;}
+.fix_btn5 i{background:url(../images/fixpic_s5.png) no-repeat center;background-size:0.41rem 0.8rem;background-position: 0 0;}
+.fix_btn5.active i{background-position: 0 -0.4rem;}
+
+
+/*常用样式*/
+.omit(){
+	overflow: hidden;text-overflow:ellipsis;word-wrap:break-word;white-space:nowrap;
+}
+/* flex布局 */
+/* 容器的六个属性 */
+
+.display(){
+	display: flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+}
+.flex-direction(@flex-direction:row){ // flex-direction: row | row-reverse | column | column-reverse;
+	flex-direction:@flex-direction;  //row默认值：从左到右
+	-webkit-flex-direction:@flex-direction;
+	-moz-flex-direction:@flex-direction;
+	-ms-flex-direction:@flex-direction;
+	-o-flex-direction:@flex-direction;
+}
+.flex-wrap(@flex-wrap:wrap){  //flex-wrap: nowrap | wrap | wrap-reverse;
+	flex-wrap:@flex-wrap;            //nowrap默认值：不换行
+	-webkit-flex-wrap:@flex-wrap; 
+	-moz-flex-wrap:@flex-wrap; 
+	-ms-flex-wrap:@flex-wrap; 
+	-o-flex-wrap:@flex-wrap; 
+}
+.flex-flow(@flex-direction:row;@flex-wrap:wrap){ //flex-flow: <flex-direction> || <flex-wrap>;
+	flex-flow:@flex-direction @flex-wrap;
+	-webkit-flex-flow:@flex-direction @flex-wrap;
+	-moz-flex-flow:@flex-direction @flex-wrap;
+	-ms-flex-flow:@flex-direction @flex-wrap;
+	-o-flex-flow:@flex-direction @flex-wrap;
+}
+.justify-content(@justify-content:space-between;){ //justify-content: flex-start | flex-end | center | space-between | space-around;
+	justify-content:@justify-content;  //项目在主轴上的对齐方式  默认值flex-start：左对齐
+	-webkit-justify-content:@justify-content; 
+	-moz-justify-content:@justify-content; 
+	-ms-justify-content:@justify-content; 
+	-o-justify-content:@justify-content; 
+}
+.align-items(@align-items:stretch;){ //align-items: flex-start | flex-end | center | baseline | stretch;
+	align-items:@align-items;    // 项目在交叉轴上对齐方式   没发现有什么用
+	-webkit-align-items:@align-items;
+	-moz-align-items:@align-items;
+	-ms-align-items:@align-items;
+	-o-align-items:@align-items;
+}
+.align-content(@align-content:flex-start){  //align-content: flex-start | flex-end | center | space-between | space-around | stretch;
+	align-content:@align-content;  // 多根轴线的对齐方式  默认值stretch：轴线占满整个交叉轴
+	-webkit-align-content:@align-content; 
+	-moz-align-content:@align-content; 
+	-ms-align-content:@align-content; 
+	-o-align-content:@align-content; 
+}
+/* 项目的六个属性 */
+.order(@order:0;){  //order: <integer>;
+	order:@order;       //项目的排列顺序。数值越小，排列越靠前，默认为0。
+	-webkit-order:@order; 
+	-moz-order:@order; 
+	-ms-order:@order; 
+	-o-order:@order; 
+}
+.flex-grow(@flex-grow:0){  // flex-grow: <number>; /* default 0 */
+	flex-grow:@flex-grow;  //项目的放大比例，默认为0
+	-webkit-flex-grow:@flex-grow; 
+	-moz-flex-grow:@flex-grow; 
+	-ms-flex-grow:@flex-grow; 
+	-o-flex-grow:@flex-grow; 
+}
+.flex-shrink(@flex-shrink:1){  //flex-shrink: <number>; /* default 1 */
+	flex-shrink:@flex-shrink;  //项目的缩小比例，默认为1，即如果空间不足，该项目将缩小。
+	-webkit-flex-shrink:@flex-shrink; 
+	-moz-flex-shrink:@flex-shrink; 
+	-ms-flex-shrink:@flex-shrink; 
+	-o-flex-shrink:@flex-shrink; 
+}
+.flex-basis(@flex-basis:auto){ //flex-basis: <length> | auto; /* default auto */
+	flex-basis:@flex-basis;   //在分配多余空间之前，项目占据的主轴空间（main size） 发现没什么用
+	-webkit-flex-basis:@flex-basis;
+	-moz-flex-basis:@flex-basis;
+	-ms-flex-basis:@flex-basis;
+	-o-flex-basis:@flex-basis;
+}
+.flex(@flex:auto){  //flex: none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]
+	flex:@arguments; //flex属性是flex-grow, flex-shrink 和 flex-basis的简写，默认值为0 1 auto。后两个属性可选
+	-webkit-flex:@arguments;
+	-moz-flex:@arguments;
+	-ms-flex:@arguments;
+	-o-flex:@arguments;
+}
+.align-self(@align-self:auto){ // align-self: auto | flex-start | flex-end | center | baseline | stretch;
+	align-self:@align-self; //允许单个项目有与其他项目不一样的对齐方式，可覆盖align-items属性。默认值为auto 没啥用
+	-webkit-align-self:@align-self; 
+	-moz-align-self:@align-self; 
+	-ms-align-self:@align-self; 
+	-o-align-self:@align-self; 
+}
+

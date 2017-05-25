@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>《坦克世界》</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="keywords" content="《坦克世界》">
+<meta name="description" content="《坦克世界》">
+<meta name="full-screen" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="format-detection" content="address=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta http-equiv="Expires" content="-1">
+<meta http-equiv="Cache-Control" content="no-cache">
+<meta http-equiv="Pragma" content="no-cache">
+<link rel="icon" href="http://wot.kongzhong.com/images/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="http://wot.kongzhong.com/images/favicon.ico" type="image/x-icon">
+<link rel="bookmark" href="http://wot.kongzhong.com/images/favicon.ico" type="image/x-icon">
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/rem.js"></script>
+<link type="text/css" rel="stylesheet" href="css/com.css">
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+</head>
+
+<body>
+<!--[if lte IE 8]>
+<body class="ite">
+<p class="chromeframe">亲，浏览器版本过低，换一个吧！<a href="http://windows.microsoft.com/" target="_blank">升级您的IE浏览器</a>，或使用<a href="http://www.google.cn/intl/zh-CN/chrome/" target="_blank">Google Chrome</a>、<a href="http://www.firefox.com.cn/download/" target="_blank">Firefox</a>等高级浏览器。</p>
+<![endif]-->
+<div class="wrap">
+	<div class="view">
+		<div class="top_fixed">
+			<header>
+				<div class="header_wrap">
+					<div class="mes_btn">
+						<!-- 当前样式类active  有新消息时的小红点类newsActive -->
+						<a href="javascript:;" class="active">系统消息<i></i></a>
+						<em class="line"></em>
+						<a href="javascript:;">好友消息<i></i></a>
+						<em class="line"></em>
+						<a href="javascript:;" class="newsActive">好友请求<i></i></a>
+					</div>
+					<!-- 编辑：edit_false   全选/取消edit_true -->
+					<div class="mes_editor edit_false">
+						<div class="edit_normal">
+							<a href="javascript:;" class="mes_editBtn">
+								<i class="edit_ico"></i>
+								<i>编辑</i>
+							</a>
+						</div>
+						<div class="edit_choose">
+							<!-- <input type="button"  class="check_all" value="全选">
+							<input type="button"  class="cancel" value="取消"> -->
+							<a href="javascript:;" class="check_all">全选</a>
+							<a href="javascript:;" class="cancel">取消</a>
+						</div>
+					</div>
+				</div>
+			</header>
+		</div>
+		<div class="scroll_wrap">
+			<div class="scroll_content">
+				<ul class="mes_list">
+					<!-- delete_false  delete_true -->
+					<li class="delete_false">
+						<div class="choose_box">
+							<input type="checkbox" id="mes_checkbox" class="mes_checkbox" />
+							<label for="mes_checkbox"></label>
+						</div>
+						<span class="unread"></span>
+						<a href="javascript:;" class="mes_info">
+							<p class="mes_title">
+								<i class="mes_tit">标题标题标题标题标题标题标题</i>
+								<i class="mes_time">0520</i>
+							</p>
+							<p class="mes_des">描述描述描述描述描述描述描述描述描述描述</p>
+						</a>
+						<span class="mes_delete"></span>
+					</li>
+					<!-- delete_false  delete_true -->
+					<li class="delete_false">
+						<div class="choose_box">
+							<input type="checkbox" id="mes_checkbox1" class="mes_checkbox" />
+							<label for="mes_checkbox1"></label>
+						</div>
+						<span class="unread"></span>
+						<a href="javascript:;" class="mes_info">
+							<p class="mes_title">
+								<i class="mes_tit">标题标题标题标题标题标题标题</i>
+								<i class="mes_time">0520</i>
+							</p>
+							<p class="mes_des">描述描述描述描述描述描述描述描述描述描述</p>
+						</a>
+						<span class="mes_delete"></span>
+					</li>
+					<!-- delete_false  delete_true -->
+					<li class="delete_false">
+						<div class="choose_box">
+							<input type="checkbox" id="mes_checkbox2" class="mes_checkbox" />
+							<label for="mes_checkbox2"></label>
+						</div>
+						<span class="unread"></span>
+						<a href="javascript:;" class="mes_info">
+							<p class="mes_title">
+								<i class="mes_tit">标题标题标题标题标题标题标题</i>
+								<i class="mes_time">0520</i>
+							</p>
+							<p class="mes_des">描述描述描述描述描述描述描述描述描述描述</p>
+						</a>
+						<span class="mes_delete"></span>
+					</li>
+					<!-- delete_false  delete_true -->
+					<li class="delete_false">
+						<div class="choose_box">
+							<input type="checkbox" id="mes_checkbox3" class="mes_checkbox" />
+							<label for="mes_checkbox3"></label>
+						</div>
+						<span class="unread"></span>
+						<a href="javascript:;" class="mes_info">
+							<p class="mes_title">
+								<i class="mes_tit">标题标题标题标题标题标题标题</i>
+								<i class="mes_time">0520</i>
+							</p>
+							<p class="mes_des">描述描述描述描述描述描述描述描述描述描述</p>
+						</a>
+						<span class="mes_delete"></span>
+					</li>
+					<!-- delete_false  delete_true -->
+					<li class="delete_false">
+						<div class="choose_box">
+							<input type="checkbox" id="mes_checkbox4" class="mes_checkbox" />
+							<label for="mes_checkbox4"></label>
+						</div>
+						<span class="unread"></span>
+						<a href="javascript:;" class="mes_info">
+							<p class="mes_title">
+								<i class="mes_tit">标题标题标题标题标题标题标题</i>
+								<i class="mes_time">0520</i>
+							</p>
+							<p class="mes_des">描述描述描述描述描述描述描述描述描述描述</p>
+						</a>
+						<span class="mes_delete"></span>
+					</li>
+					<!-- delete_false  delete_true -->
+					<li class="delete_false">
+						<div class="choose_box">
+							<input type="checkbox" id="mes_checkbox5" class="mes_checkbox" />
+							<label for="mes_checkbox5"></label>
+						</div>
+						<span class="unread"></span>
+						<a href="javascript:;" class="mes_info">
+							<p class="mes_title">
+								<i class="mes_tit">标题标题标题标题标题标题标题</i>
+								<i class="mes_time">0520</i>
+							</p>
+							<p class="mes_des">描述描述描述描述描述描述描述描述描述描述</p>
+						</a>
+						<span class="mes_delete"></span>
+					</li>
+					<!-- delete_false  delete_true -->
+					<li class="delete_false">
+						<div class="choose_box">
+							<input type="checkbox" id="mes_checkbox6" class="mes_checkbox" />
+							<label for="mes_checkbox6"></label>
+						</div>
+						<span class="unread"></span>
+						<a href="javascript:;" class="mes_info">
+							<p class="mes_title">
+								<i class="mes_tit">标题标题标题标题标题标题标题</i>
+								<i class="mes_time">0520</i>
+							</p>
+							<p class="mes_des">描述描述描述描述描述描述描述描述描述描述</p>
+						</a>
+						<span class="mes_delete"></span>
+					</li>
+					<!-- delete_false  delete_true -->
+					<li class="delete_false">
+						<div class="choose_box">
+							<input type="checkbox" id="mes_checkbox7" class="mes_checkbox" />
+							<label for="mes_checkbox7"></label>
+						</div>
+						<span class="unread"></span>
+						<a href="javascript:;" class="mes_info">
+							<p class="mes_title">
+								<i class="mes_tit">标题标题标题标题标题标题标题</i>
+								<i class="mes_time">0520</i>
+							</p>
+							<p class="mes_des">描述描述描述描述描述描述描述描述描述描述</p>
+						</a>
+						<span class="mes_delete"></span>
+					</li>
+					<!-- delete_false  delete_true -->
+					<li class="delete_false">
+						<div class="choose_box">
+							<input type="checkbox" id="mes_checkbox8" class="mes_checkbox" />
+							<label for="mes_checkbox8"></label>
+						</div>
+						<span class="unread"></span>
+						<a href="javascript:;" class="mes_info">
+							<p class="mes_title">
+								<i class="mes_tit">标题标题标题标题标题标题标题</i>
+								<i class="mes_time">0520</i>
+							</p>
+							<p class="mes_des">描述描述描述描述描述描述描述描述描述描述</p>
+						</a>
+						<span class="mes_delete"></span>
+					</li>
+					<!-- delete_false  delete_true -->
+					<li class="delete_false">
+						<div class="choose_box">
+							<input type="checkbox" id="mes_checkbox9" class="mes_checkbox" />
+							<label for="mes_checkbox9"></label>
+						</div>
+						<span class="unread"></span>
+						<a href="javascript:;" class="mes_info">
+							<p class="mes_title">
+								<i class="mes_tit">标题标题标题标题标题标题标题</i>
+								<i class="mes_time">0520</i>
+							</p>
+							<p class="mes_des">描述描述描述描述描述描述描述描述描述描述</p>
+						</a>
+						<span class="mes_delete"></span>
+					</li>
+					<!-- delete_false  delete_true -->
+					<li class="delete_false">
+						<div class="choose_box">
+							<input type="checkbox" id="mes_checkbox10" class="mes_checkbox" />
+							<label for="mes_checkbox10"></label>
+						</div>
+						<span class="unread"></span>
+						<a href="javascript:;" class="mes_info">
+							<p class="mes_title">
+								<i class="mes_tit">标题标题标题标题标题标题标题</i>
+								<i class="mes_time">0520</i>
+							</p>
+							<p class="mes_des">描述描述描述描述描述描述描述描述描述描述</p>
+						</a>
+						<span class="mes_delete"></span>
+					</li>
+					<!-- delete_false  delete_true -->
+					<li class="delete_false">
+						<div class="choose_box">
+							<input type="checkbox" id="mes_checkbox11" class="mes_checkbox" />
+							<label for="mes_checkbox11"></label>
+						</div>
+						<span class="unread"></span>
+						<a href="javascript:;" class="mes_info">
+							<p class="mes_title">
+								<i class="mes_tit">标题标题标题标题标题标题标题</i>
+								<i class="mes_time">0520</i>
+							</p>
+							<p class="mes_des">描述描述描述描述描述描述描述描述描述描述</p>
+						</a>
+						<span class="mes_delete"></span>
+					</li>
+					<!-- delete_false  delete_true -->
+					<li class="delete_false">
+						<div class="choose_box">
+							<input type="checkbox" id="mes_checkbox12" class="mes_checkbox" />
+							<label for="mes_checkbox12"></label>
+						</div>
+						<span class="unread"></span>
+						<a href="javascript:;" class="mes_info">
+							<p class="mes_title">
+								<i class="mes_tit">标题标题标题标题标题标题标题</i>
+								<i class="mes_time">0520</i>
+							</p>
+							<p class="mes_des">描述描述描述描述描述描述描述描述描述描述</p>
+						</a>
+						<span class="mes_delete"></span>
+					</li>
+					<!-- delete_false  delete_true -->
+					<li class="delete_false">
+						<div class="choose_box">
+							<input type="checkbox" id="mes_checkbox13" class="mes_checkbox" />
+							<label for="mes_checkbox13"></label>
+						</div>
+						<span class="unread"></span>
+						<a href="javascript:;" class="mes_info">
+							<p class="mes_title">
+								<i class="mes_tit">标题标题标题标题标题标题标题</i>
+								<i class="mes_time">0520</i>
+							</p>
+							<p class="mes_des">描述描述描述描述描述描述描述描述描述描述</p>
+						</a>
+						<span class="mes_delete"></span>
+					</li>
+					<!-- delete_false  delete_true -->
+					<li class="delete_false">
+						<div class="choose_box">
+							<input type="checkbox" id="mes_checkbox14" class="mes_checkbox" />
+							<label for="mes_checkbox14"></label>
+						</div>
+						<span class="unread"></span>
+						<a href="javascript:;" class="mes_info">
+							<p class="mes_title">
+								<i class="mes_tit">标题标题标题标题标题标题标题</i>
+								<i class="mes_time">0520</i>
+							</p>
+							<p class="mes_des">描述描述描述描述描述描述描述描述描述描述</p>
+						</a>
+						<span class="mes_delete"></span>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="bottom_fixed">
+			<!-- 全选删除 -->
+			<div class="checkAll_delete"><a href="javascript:;"></a></div>
+			<footer>
+				<a href="map.html" class="fix_btn1 "><i></i><p>地图</p></a>
+				<a href="message.html" class="fix_btn2 active"><i></i><em></em><p>消息</p></a>
+				<a href="ranking.html" class="fix_btn3"><i></i><p>排行</p></a>
+				<a href="friend.html" class="fix_btn4"><i></i><p>好友</p></a>
+				<a href="myCenter.html" class="fix_btn5"><i></i><p>我的</p></a>
+			</footer>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/style.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript">
+	$(function(){
+		//编辑
+		$('.mes_editBtn').on('click',function(){
+			$('.mes_editor').removeClass('edit_false').addClass('edit_true');  //编辑消失 全选/取消显示
+			$('.mes_list li').removeClass('delete_false').addClass('delete_true');//单个删除消失 复选框显示
+			$('.checkAll_delete').show();  //底部批量删除显示
+		})
+		//取消
+		$('.cancel').on('click',function(){
+			$('.mes_editor').removeClass('edit_true').addClass('edit_false');  //全选/取消消失  编辑显示 
+			$('.mes_list li').removeClass('delete_true').addClass('delete_false'); //复选框消失  单个删除显示 
+			$('.checkAll_delete').hide();  //底部批量删除消失
+			$('.mes_list').find('input[type=checkbox]').prop('checked',false);  //用于清空复选框状态
+			$('.check_all').html('全选');                                      
+			 bChecked=false;													 //改变全选状态
+		})
+		//全选
+		var bChecked=false;  //全选按钮的状态
+		var checkBox=$('.mes_checkbox');
+		var iCountChcekBox=0;  //全局变量
+		//全选/全不选
+		$('.check_all').on('click',function(){
+			bChecked=!bChecked;     
+			if(bChecked){
+				$('.mes_list').find('input[type=checkbox]').prop('checked',true);
+				$(this).html('全不选');
+				iCountChcekBox=$('.mes_checkbox').length;
+			}else{
+				$('.mes_list').find('input[type=checkbox]').prop('checked',false);
+				$(this).html('全选');
+				iCountChcekBox=0;
+			}	
+		})
+		//用户全选后，又点击复选框
+		$('.mes_checkbox').each(function(index,domEle){
+			$('.mes_checkbox').eq(index).on('click',function(){
+				if($(this).prop('checked')==true){
+					iCountChcekBox++;
+				}else{
+					iCountChcekBox--;
+				}
+				if(iCountChcekBox==$('.mes_checkbox').length){
+					$('.check_all').html('全不选');
+					bChecked=true;
+				}else{
+					$('.check_all').html('全选');
+					bChecked=false;
+				}
+			})
+		})
+	})
+</script>
+
+
+
+</html>

@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>《坦克世界》</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="keywords" content="《坦克世界》">
+<meta name="description" content="《坦克世界》">
+<meta name="full-screen" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="format-detection" content="address=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta http-equiv="Expires" content="-1">
+<meta http-equiv="Cache-Control" content="no-cache">
+<meta http-equiv="Pragma" content="no-cache">
+<link rel="icon" href="http://wot.kongzhong.com/images/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="http://wot.kongzhong.com/images/favicon.ico" type="image/x-icon">
+<link rel="bookmark" href="http://wot.kongzhong.com/images/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" type="text/css" href="css/croll.css">
+<link rel="stylesheet" type="text/css" href="css/jquery.mCustomScrollbar.css">
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/rem.js"></script>
+<link type="text/css" rel="stylesheet" href="css/com.css">
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+</head>
+
+<body>
+<!--[if lte IE 8]>
+<body class="ite">
+<p class="chromeframe">亲，浏览器版本过低，换一个吧！<a href="http://windows.microsoft.com/" target="_blank">升级您的IE浏览器</a>，或使用<a href="http://www.google.cn/intl/zh-CN/chrome/" target="_blank">Google Chrome</a>、<a href="http://www.firefox.com.cn/download/" targe  t="_blank">Firefox</a>等高级浏览器。</p>
+<![endif]-->
+<div class="wrap">
+	<div class="main_wrap">
+		<!-- 排行 -->
+		<div class="main_public show">
+			<div class="ranking_wrap">
+				<div class="ranking_btn clearfloat">
+					<a href="javascript:;">个人排位</a>
+					<a href="javascript:;" class="active">战车排位</a>
+				</div>
+				<div class="ranking_box">
+					<!-- 个人排位 -->
+					<div class="rank_part">
+						<div class="R_search clearfloat">
+							<p>此战区有<span>10000</span>人</p>
+							<div class="cardSel">   
+								<i>战区排名</i><em></em>   
+								<div class="selC">    
+									<a href="javascript:;" value="0">战区排名</a>
+									<a href="javascript:;" value="1">全省排名</a>    
+									<a href="javascript:;" value="2">全国排名</a>
+								</div>
+								<input type='hidden' class='sel-ed'  validate='true' value=''>
+							</div>
+							<i onclick="Tips.showPerRule();" class="help"></i>
+						</div>
+						<ul class="fri_list ranking_list">
+							<li>
+								<a href="javascript:;">
+									<!-- r_num_dark 背景灰色  -->
+									<span class="r_num r_num_dark"><p>我的排名<br />未上榜</p></span>
+									<span class="r_headpic"><img src="images/r_headpic.png" /></span>
+									<span class="r_tips">
+										<p class="perName">胖胖的猪头胖胖的猪头</p>
+										<p>战区：<i>北京市海淀区</i></p>
+										<p>大区：<i>南方电信区</i></p>
+									</span>
+								</a>
+								<span class="r_pic">
+									<em class="pwpic"><img src="images/pwpic.jpg" /></em>
+									<em class="addFri" onclick="Tips.showAddFri();"></em>
+								</span>
+							</li>
+							<li>
+								<a href="javascript:;">
+									<span class="r_num">1</span>
+									<span class="r_headpic"><img src="images/r_headpic.png" /></span>
+									<span class="r_tips">
+										<p class="perName">胖胖的猪头</p>
+										<p>战区：<i>北京市海淀区</i></p>
+										<p>大区：<i>南方电信区</i></p>
+									</span>
+									<span class="r_pic">
+										<em class="pwpic"><img src="images/pwpic.jpg" /></em>
+										<em class="addFri" onclick="Tips.showAddFri();"></em>
+									</span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;">
+									<span class="r_num">2</span>
+									<span class="r_headpic"><img src="images/r_headpic.png" /></span>
+									<span class="r_tips">
+										<p class="perName">胖胖的猪头</p>
+										<p>战区：<i>北京市海淀区</i></p>
+										<p>大区：<i>南方电信区</i></p>
+									</span>
+									<span class="r_pic">
+										<em class="pwpic"><img src="images/pwpic.jpg" /></em>
+										<em class="addFri" onclick="Tips.showAddFri();"></em>
+									</span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;">
+									<span class="r_num">3</span>
+									<span class="r_headpic"><img src="images/r_headpic.png" /></span>
+									<span class="r_tips">
+										<p class="perName">胖胖的猪头</p>
+										<p>战区：<i>北京市海淀区</i></p>
+										<p>大区：<i>南方电信区</i></p>
+									</span>
+									<span class="r_pic">
+										<em class="pwpic"><img src="images/pwpic.jpg" /></em>
+										<em class="addFri" onclick="Tips.showAddFri();"></em>
+									</span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;">
+									<span class="r_num r_num_dark">4</span>
+									<span class="r_headpic"><img src="images/r_headpic.png" /></span>
+									<span class="r_tips">
+										<p class="perName">胖胖的猪头</p>
+										<p>战区：<i>北京市海淀区</i></p>
+										<p>大区：<i>南方电信区</i></p>
+									</span>
+									<span class="r_pic">
+										<em class="pwpic"><img src="images/pwpic.jpg" /></em>
+										<em class="addFri" onclick="Tips.showAddFri();"></em>
+									</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<!-- 战车排位 -->
+					<div class="rank_part show">
+						<div class="R_search clearfloat">
+							<p class="reCar">此战区有<span>10000</span>人使用该战车</p>
+							<div class="replace_car fl"><a href="javascript:;" onclick="Tips.showWarCar();">更换战车</a></div>
+							<div class="cardSel">   
+								<i>战区排名</i><em></em>   
+								<div class="selC">    
+									<a href="javascript:;" value="0">战区排名</a>
+									<a href="javascript:;" value="1">全省排名</a>    
+									<a href="javascript:;" value="2">全国排名</a>
+								</div>
+								<input type='hidden' class='sel-ed'  validate='true' value=''>
+							</div>
+							<i onclick="Tips.showCarRule();" class="help"></i>
+						</div>
+						<ul class="fri_list ranking_list warCar_list">
+							<li>
+								<a href="javascript:;">
+									<!-- r_num_dark 背景灰色  -->
+									<span class="r_num r_num_dark"><p>IS-7大师<br />我的排名<br /><b>1124</b></p></span>
+									<span class="r_headpic"><img src="images/r_headpic.png" /></span>
+									<span class="r_tips">
+										<p class="perName">胖胖的猪头</p>
+										<p>战区：<i>北京市海淀区</i></p>
+										<p>大区：<i>南方电信区</i></p>
+									</span>
+									<span class="r_pic">
+										<em class="addFri" onclick="Tips.showAddFri();"></em>
+									</span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;">
+									<span class="r_num r_num_dark"><p>IS-7大师<br />我的排名<br /><b>1124</b></p></span>
+									<span class="r_headpic"><img src="images/r_headpic.png" /></span>
+									<span class="r_tips">
+										<p class="perName">胖胖的猪头</p>
+										<p>战区：<i>北京市海淀区</i></p>
+										<p>大区：<i>南方电信区</i></p>
+									</span>
+									<span class="r_pic">
+										<em class="addFri" onclick="Tips.showAddFri();"></em>
+									</span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;">
+									<span class="r_num r_num_dark"><p>IS-7大师<br />我的排名<br /><b>1124</b></p></span>
+									<span class="r_headpic"><img src="images/r_headpic.png" /></span>
+									<span class="r_tips">
+										<p class="perName">胖胖的猪头</p>
+										<p>战区：<i>北京市海淀区</i></p>
+										<p>大区：<i>南方电信区</i></p>
+									</span>
+									<span class="r_pic">
+										<em class="addFri" onclick="Tips.showAddFri();"></em>
+									</span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;">
+									<span class="r_num r_num_dark"><p>IS-7大师<br />我的排名<br /><b>1124</b></p></span>
+									<span class="r_headpic"><img src="images/r_headpic.png" /></span>
+									<span class="r_tips">
+										<p class="perName">胖胖的猪头</p>
+										<p>战区：<i>北京市海淀区</i></p>
+										<p>大区：<i>南方电信区</i></p>
+									</span>
+									<span class="r_pic">
+										<em class="addFri" onclick="Tips.showAddFri();"></em>
+									</span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;">
+									<span class="r_num r_num_dark"><p>IS-7大师<br />我的排名<br /><b>1124</b></p></span>
+									<span class="r_headpic"><img src="images/r_headpic.png" /></span>
+									<span class="r_tips">
+										<p class="perName">胖胖的猪头</p>
+										<p>战区：<i>北京市海淀区</i></p>
+										<p>大区：<i>南方电信区</i></p>
+									</span>
+									<span class="r_pic">
+										<em class="addFri" onclick="Tips.showAddFri();"></em>
+									</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 底部导航 -->
+	<div class="fixed_wrap">
+		<a href="map.html" class="fix_btn1 "><i></i>地图</a>
+		<a href="message.html" class="fix_btn2"><i></i>消息</a>
+		<a href="ranking.html" class="fix_btn3 active"><i></i>排行</a>
+		<a href="friend.html" class="fix_btn4"><i></i>好友</a>
+		<a href="myCenter.html" class="fix_btn5"><i></i>我的</a>
+	</div>
+</div>
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/style.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript" src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+<div style="display:none"><script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_2492438'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s13.cnzz.com/stat.php%3Fid%3D2492438' type='text/javascript'%3E%3C/script%3E"));</script></div>
+</body>
+
+<!-- 更换战车弹窗 -->
+	<div class="overOpa"></div>
+	<div class="warCar_wrap">
+		<span class="close" onclick="Tips.hideWarCar();"></span>
+		<div class="warC_type">
+			<dl class="warC_list">
+				<dd>Y系坦克1</dd>
+				<dd>Y系坦克2</dd>
+				<dd>Y系坦克3</dd>
+				<dd>Y系坦克4</dd>
+				<dd>Y系坦克5</dd>
+				<dd>Y系坦克6</dd>
+				<dd>Y系坦克7</dd>
+				<dd>Y系坦克8</dd>
+				<dd>Y系坦克9</dd>
+				<dd>全新坦克</dd>
+			</dl>
+		</div>
+		<div class="warC_Info">
+			<!--  mCustomScrollbar _mCS_1 -->
+			<ul class="warC_piclist clearfloat">
+				<li>
+					<a href="javascript:;">
+						<span class="tankPic"><img src="images/warCar.png" /></span>
+						<p>重型坦克</p>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;">
+						<span class="tankPic"><img src="images/warCar.png" /></span>
+						<p>重型坦克重型坦克</p>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;">
+						<span class="tankPic"><img src="images/warCar.png" /></span>
+						<p>IS-7</p>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;">
+						<span class="tankPic"><img src="images/warCar.png" /></span>
+						<p>IS-7</p>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;">
+						<span class="tankPic"><img src="images/warCar.png" /></span>
+						<p>IS-7</p>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;">
+						<span class="tankPic"><img src="images/warCar.png" /></span>
+						<p>IS-7</p>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;">
+						<span class="tankPic"><img src="images/warCar.png" /></span>
+						<p>IS-7</p>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;">
+						<span class="tankPic"><img src="images/warCar.png" /></span>
+						<p>IS-7</p>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;">
+						<span class="tankPic"><img src="images/warCar.png" /></span>
+						<p>IS-7</p>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;">
+						<span class="tankPic"><img src="images/warCar.png" /></span>
+						<p>IS-7</p>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;">
+						<span class="tankPic"><img src="images/warCar.png" /></span>
+						<p>IS-7</p>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;">
+						<span class="tankPic"><img src="images/warCar.png" /></span>
+						<p>IS-7</p>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;">
+						<span class="tankPic"><img src="images/warCar.png" /></span>
+						<p>IS-7</p>
+					</a>
+				</li>
+			</ul>
+			<ul class="warC_piclist clearfloat">
+				<li>
+					<a href="javascript:;">
+						<span class="tankPic"><img src="images/warCar.png" /></span>
+						<p>IS-7</p>
+					</a>
+				</li>
+			</ul>
+			<ul class="warC_piclist clearfloat">
+				<li>
+					<a href="javascript:;">
+						<span class="tankPic"><img src="images/warCar.png" /></span>
+						<p>IS-72</p>
+					</a>
+				</li></ul>
+			<ul class="warC_piclist clearfloat">
+				<li>
+					<a href="javascript:;">
+						<span class="tankPic"><img src="images/warCar.png" /></span>
+						<p>IS-72</p>
+					</a>
+				</li></ul>
+			<ul class="warC_piclist clearfloat">
+				<li>
+					<a href="javascript:;">
+						<span class="tankPic"><img src="images/warCar.png" /></span>
+						<p>IS-72</p>
+					</a>
+				</li></ul>
+			<ul class="warC_piclist clearfloat">
+				<li>
+					<a href="javascript:;">
+						<span class="tankPic"><img src="images/warCar.png" /></span>
+						<p>IS-74</p>
+					</a>
+				</li></ul>
+			<ul class="warC_piclist clearfloat">
+				<li>
+					<a href="javascript:;">
+						<span class="tankPic"><img src="images/warCar.png" /></span>
+						<p>IS-75</p>
+					</a>
+				</li></ul>
+			<ul class="warC_piclist clearfloat">
+				<li>
+					<a href="javascript:;">
+						<span class="tankPic"><img src="images/warCar.png" /></span>
+						<p>IS-7</p>
+					</a>
+				</li></ul>
+			<ul class="warC_piclist clearfloat">
+				<li>
+					<a href="javascript:;">
+						<span class="tankPic"><img src="images/warCar.png" /></span>
+						<p>IS-7</p>
+					</a>
+				</li>
+			</ul>
+			<ul class="warC_piclist clearfloat">
+				<li>
+					<a href="javascript:;">
+						<span class="tankPic"><img src="images/warCar.png" /></span>
+						<p>IS-71</p>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</html>

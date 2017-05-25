@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>《坦克世界》</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="keywords" content="《坦克世界》">
+<meta name="description" content="《坦克世界》">
+<meta name="full-screen" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="format-detection" content="address=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta http-equiv="Expires" content="-1">
+<meta http-equiv="Cache-Control" content="no-cache">
+<meta http-equiv="Pragma" content="no-cache">
+<link rel="icon" href="http://wot.kongzhong.com/images/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="http://wot.kongzhong.com/images/favicon.ico" type="image/x-icon">
+<link rel="bookmark" href="http://wot.kongzhong.com/images/favicon.ico" type="image/x-icon">
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/rem.js"></script>
+<link type="text/css" rel="stylesheet" href="css/com.css">
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+</head>
+
+<body>
+<!--[if lte IE 8]>
+<body class="ite">
+<p class="chromeframe">亲，浏览器版本过低，换一个吧！<a href="http://windows.microsoft.com/" target="_blank">升级您的IE浏览器</a>，或使用<a href="http://www.google.cn/intl/zh-CN/chrome/" target="_blank">Google Chrome</a>、<a href="http://www.firefox.com.cn/download/" target="_blank">Firefox</a>等高级浏览器。</p>
+<![endif]-->
+<div class="wrap">
+	<div class="main_wrap">
+		<!-- 个人中心 -->
+		<div class="main_public person_wrap show">
+			<div class="per_main">
+				<div class="per_top">
+					<div class="perInfo">
+						<ul class="perInfo_list">
+							<li class="headPic"><img src="images/headpic1.png" /></li>
+							<li class="per_tips">
+								<!-- per_woman女  per_man男 -->
+								<p class="perName">胖胖的猪头<span class="per_man"></span></p>
+								<p>称号　<span>海淀区</span></p>
+								<p>战区　<span>海淀区</span></p>
+								<p>服务器　<span>南方电信区</span></p>
+							</li>
+							<li class="rank">
+								<p class="rankPic"><img src="images/rank.png" /></p>
+								<p>上尉</p>
+								<p class="star">
+									<span class="active"></span>
+									<span></span>
+									<span></span>
+									<span></span>
+									<span></span>
+								</p>
+							</li>
+						</ul>
+					</div>
+					<div class="ranking"><a href="javascript:;" class="open_rank" onclick="Tips.showRank1();">开启排位</a><i class="c_help"></i></div>
+					<div class="rank_tips">
+						<p>驾龄（年）:<span>4</span></p>
+						<p>对战场次:<span>20577</span></p>
+						<p>坦克数量:<span>15</span></p>
+						<p>战区排名:<span>100</span></p>
+					</div>
+				</div>
+				<div class="perCon_box">
+					<ul class="per_list">
+						<li class="per_item1 active"><a href="data.html"><i></i>对战数据<em></em></a></li>
+						<li class="per_item2"><a href="honor.html"><i></i>荣誉数据<em></em></a></li>
+						<li class="per_item3"><a href="rank.html"><i></i>军衔积分<em></em></a></li>
+						<li class="per_item4"><a href="car.html"><i></i>常用车辆<em></em></a></li>
+						<li class="per_item5"><a href="card.html"><i></i>我的名片<em></em></a></li>
+					</ul>
+					<div class="regBtn_box"><a class="regBtn" href='javascript:;' onclick="Tips.showRank();">退出登录</a></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 底部导航 -->
+	<div class="fixed_wrap">
+		<a href="map.html" class="fix_btn1"><i></i>地图</a>
+		<a href="message.html" class="fix_btn2 newsActive"><i></i><em></em>消息</a>
+		<a href="ranking.html" class="fix_btn3"><i></i>排行</a>
+		<a href="friend.html" class="fix_btn4"><i></i>好友</a>
+		<a href="myCenter.html" class="fix_btn5 active"><i></i>我的</a>
+	</div> 
+</div>
+<!-- 指引 -->
+<div class="guideOpa" style="display: none;"></div>
+<div class="guideBox" style="display: none;">
+	<div class="guide1">
+		<div class="g_con"></div>
+		<div class="g_btnBox"><a href="javascript:tips(2);" class="g_btn"></a></div>
+	</div>
+	<div class="guide2">
+		<div class="g_btnBox2"><a href="javascript:tips(3);" class="g_btn1"></a></div>
+		<div class="g_con2"></div>
+	</div>
+	<div class="guide3">
+		<div class="g_con3">
+			<div class="warZone">
+				<span class="warZone_s1">我的战区：</span>
+				<span class="warZone_s2"></span>
+				<span class="warZone_line"></span>
+				<span class="warZone_s3"></span>
+			</div>
+		</div>
+		<div class="g_btnBox3"><a href="javascript:closeTips();" class="g_btn2"></a></div>
+	</div>
+</div>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/style.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript" src="js/guideC.js"></script>
+<script type="text/javascript">
+	// onpopstate可以监控state变化
+
+		window.onpopstate = function(e){
+			console.log(window.location.href)
+			if(history.state)
+			{
+				var state = history.state;
+				console.log(1)
+				//showPageAtIndex(state.id);
+			}
+		}
+</script>
+<div style="display:none"><script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_2492438'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s13.cnzz.com/stat.php%3Fid%3D2492438' type='text/javascript'%3E%3C/script%3E"));</script></div>
+</body>
+
+</html>

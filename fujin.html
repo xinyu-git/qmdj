@@ -1,0 +1,343 @@
+<!doctype html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
+
+    <style type="text/css">
+      body,html,#container{
+        height: 99%;
+        margin: 0px;
+      }
+    </style>
+    <style type="text/css">
+        .mapIco{font-size:0.2rem;width:1.7rem;}
+        .mapIco_pic{overflow: hidden;width:1rem;height:1rem;font-size:0.2rem;color:#fff;position:relative;z-index:3;text-align:center;border:1px solid #1771dc;border-radius:50%;margin: 0 auto;}
+        .mapIco_img{width:100%;height:100%;}
+        .mapIco_img img,.myself img,.stronghold img{width:100%;display:block;margin:0 auto;border-radius:50%;}
+        .mapIco_level{width:100%;text-align:center;position:absolute;left:0;bottom:0;background:#000;}
+        .mapIco_info{font-size:0.2rem;color:#000;background:#fefefe;min-width:1.7rem;padding:0.05rem 0.05rem;}
+        .mapIco_info p:first-child{font-size:0.3rem;color:#333333;font-weight:bold;}
+        .info {
+            border: solid 1px silver;
+            /*background: url("http://wot.kongzhong.com/style/newindex/images/newsBG.jpg") no-repeat;*/
+            background: none repeat scroll 0 0 #333333;
+        }
+        div.info-top {
+            position: relative;
+            /*background: none repeat scroll 0 0 #F9F9F9;*/
+            border-bottom: 1px solid #CCC;
+            border-radius: 5px 5px 0 0;
+        }
+        div.info-top div {
+            display: inline-block;
+            color: #ffffff;
+            font-size: 14px;
+            font-weight: bold;
+            line-height: 31px;
+            padding: 0 10px;
+        }
+        div.info-top img {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            transition-duration: 0.25s;
+        }
+        div.info-top img:hover {
+            box-shadow: 0px 0px 5px #000;
+        }
+        div.info-middle {
+            font-size: 14px;
+            padding: 6px;
+            line-height: 24px;
+
+        }
+        div.info-middle ol{
+        	margin:0px;  
+        	padding: 0 10px;
+        	list-style-type:none;
+        	/*counter-reset:sectioncounter;*/
+        }
+        div.info-middle li{
+        	list-style-position:outside;
+        }
+        div.info-middle li:before {  
+		   /* content:counter(sectioncounter) "ã";   
+		    counter-increment:sectioncounter;  */
+		}
+
+        div.info-bottom {
+            height: 0px;
+            width: 100%;
+            clear: both;
+            text-align: center;
+        }
+        div.info-bottom img {
+            position: relative;
+            z-index: 104;
+        }
+        span {
+            margin-left: 5px;
+            font-size: 11px;
+        }
+        .info-middle img {
+            float: left;
+            margin-right: 6px;
+        }
+    </style>
+    <title>身边的大神们</title>
+  </head>
+  <body>
+    <div id="container" tabindex="0"></div>
+    <!-- 其他人 -->
+    <div style="display: none;">
+        <div class="mapIco" id="myIcon">
+            <div class="mapIco_pic">
+                <p class="mapIco_img"><img src="images/mapico1.png" /></p>
+                <p class="mapIco_level">中将</p>
+            </div>
+            <div class="mapIco_info">
+                <p>胖胖的猪头</p>
+                <p>海淀第一[IS-7]</p>
+            </div>
+        </div>
+    </div>
+     <div style="display: none;">
+        <div class="mapIco" id="myIcon1">
+            <div class="mapIco_pic">
+                <p class="mapIco_img"><img src="images/mapico1.png" /></p>
+                <p class="mapIco_level">中将w</p>
+            </div>
+            <div class="mapIco_info">
+                <p>胖胖的猪头w</p>
+                <p>海淀第w一[IS-7]</p>
+            </div>
+        </div>
+    </div>
+    <!-- 自己人 -->
+    <div style="display: none;">
+        <div class="myselfBg" id="myslfBg"><span class="myself"><img src="images/myself.png" /></span></div>
+    </div>
+   	<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="http://webapi.amap.com/maps?v=1.3&key=2da793b07ba629ba5cd7814437e92a9a&callback=init"></script>
+    <script src="http://webapi.amap.com/ui/1.0/main.js"></script>
+    <script type="text/javascript">
+        ~function (d, w) {
+                var docEl = d.documentElement,resizeEvt = 'orientationchange' in w ? 'orientationchange' : 'resize',
+                recalc = function () {
+                var clientWidth = docEl.clientWidth;
+                if (!clientWidth) return;
+                docEl.style.fontSize = 100 * (clientWidth / 640) + 'px';
+                };
+                if (!d.addEventListener) return;
+                recalc();
+                w.addEventListener(resizeEvt, recalc, false);
+                d.addEventListener('DOMContentLoaded', recalc, false);
+        }(document, window);
+    </script>
+    <script type="text/javascript">
+    var domJson=[
+            {id:'myIcon1',level:'中将1',NickName:'胖胖的猪头1',area:'华北大区1'},
+            {id:'myIcon2',level:'中将2',NickName:'胖胖的猪头2',area:'华北大区2'},
+            {id:'myIcon3',level:'中将3',NickName:'胖胖的猪头3',area:'华北大区3'}
+        ]
+
+    function showIco(domJson){
+        for(var i=0;i<domJson.length;i++){
+             var oDiv=document.createElement('div');
+             oDiv.innerHTML='<div class="mapIco" id='+domJson[i].id+'>\
+            <div class="mapIco_pic">\
+                <p class="mapIco_img"><img src="images/mapico1.png" /></p>\
+                <p class="mapIco_level">'+domJson[i].level+'</p>\
+            </div>\
+            <div class="mapIco_info">\
+                <p>'+domJson[i].NickName+'</p>\
+                <p>'+domJson[i].area+'</p>\
+            </div>\
+        </div>';
+        }
+        return oDiv;
+    }
+
+	//alert("-1-");
+    var mapObj;
+    function init(){
+        var toolBar;
+        mapObj = new AMap.Map('container',{zoom:11});
+        var features = ['road'];
+        mapObj.setFeatures(features);
+        var param = {t:new Date().getTime()};
+        var url = "/lbs/weixin/map/user/list";
+		
+		
+		var data = 
+			{
+				"data":
+				[{
+					id: '1001',
+                    DivId:'myIcon1',
+                    level:'中将1',
+                    NickName:'胖胖的猪头1',
+                    area:'华北大区1',
+					showCardPrize: true,
+					location: "116.205467, 39.907761",
+					//avatar: '<div style="background:red;width:20px;height:60px;"></div>',
+                    title:'标题——1',
+					desc:'描述——1'
+				},{
+					id: '1002',
+                    DivId:'myIcon2',
+                    level:'中将2',
+                    NickName:'胖胖的猪头2',
+                    area:'华北大区2',
+					showCardPrize: true,
+					location: "116.368904, 39.913423",
+					//avatar: document.getElementById('myIcon')
+                   // avatar: $('#myIcon')[0],
+                    title:'标题——2',
+                    desc:'描述——2'
+					
+				},{
+					id: '1003',
+                    DivId:'myIcon3',
+                    level:'中将3',
+                    NickName:'胖胖的猪头3',
+                    area:'华北大区3',
+					showCardPrize: true,
+					location: "116.305467, 39.807761",
+					//avatar: document.getElementById('myslfBg'),
+                    title:'标题——3',
+                    desc:'描述——3'
+				},{
+                    id: '1004',
+                    DivId:'myIcon4',
+                    level:'中将4',
+                    NickName:'胖胖的猪头4',
+                    area:'华北大区4',
+                    showCardPrize: true,
+                    location: "116.305467, 39.917761",
+                   // avatar: $('#myIcon1')[0],
+                    title:'标题——4',
+                    desc:'描述——4'
+                },{
+                    id: '1005',
+                    DivId:'myslfBg',
+                    mySelfSrc:'images/myself.png',
+                    showCardPrize: true,
+                    location: "116.315667, 39.997761",
+                   // avatar: $('#myIcon1')[0],
+                    title:'标题——4',
+                    desc:'描述——4'
+                }]
+			};
+			//alert(data.data[0].id);
+		
+//        $.get(url,param,function(data){
+		
+        	$.each(data.data,function(k,v){
+			     AMapUI.loadUI(['overlay/SimpleMarker','overlay/SimpleInfoWindow'], function(SimpleMarker,SimpleInfoWindow){
+                    if(v.id=='1005'){
+                        var test=new SimpleMarker({
+                            iconLabel: '',
+                            //直接设置html(需要以"<"开头并且以">"结尾)
+                            iconStyle:'<div class="myselfBg" id='+v.DivId+'>\
+                                           <span class="myself"><img src='+v.mySelfSrc+' /></span>\
+                                       </div>',
+                            //设置基点偏移
+                            offset: new AMap.Pixel(-10, -60),
+                            map: mapObj,
+                           showPositionPoint: false,
+                           position:v.location.split(',')
+                        });
+                    }else{
+                        var test=new SimpleMarker({
+                         iconLabel: '',
+                         //直接设置html(需要以"<"开头并且以">"结尾)
+                         iconStyle:'<div class="mapIco" id='+v.DivId+'>\
+                                        <div class="mapIco_pic">\
+                                            <p class="mapIco_img"><img src="images/mapico1.png" /></p>\
+                                            <p class="mapIco_level">'+v.level+'</p>\
+                                        </div>\
+                                        <div class="mapIco_info">\
+                                            <p>'+v.NickName+'</p>\
+                                            <p>'+v.area+'</p>\
+                                        </div>\
+                                    </div>',
+                         //设置基点偏移
+                         offset: new AMap.Pixel(-10, -60),
+                         map: mapObj,
+                        showPositionPoint: false,
+                        position:v.location.split(',')
+                     });
+                    }
+                    var infoWindow = new SimpleInfoWindow({
+                        infoTitle: '<strong>这里是标题</strong>',
+                        infoBody: '<p class="my-desc"><strong>这里是内容。</strong> <br/> 高德地图 JavaScript API，是由 JavaScript 语言编写的应用程序接口，' +
+                                    '它能够帮助您在网站或移动端中构建功能丰富、交互性强的地图应用程序</p>',
+                        //基点指向marker的头部位置
+                        offset: new AMap.Pixel(0, -31)
+                    });
+                    test.on('click',function(){
+                        alert(v.level)
+                        //window.location.href='http://www.baidu.com'+v.level
+                        //infoWindow.open(mapObj, mapObj.getCenter());
+                    })
+                 });
+        	});
+//        });
+
+
+
+        mapObj.plugin(["AMap.ToolBar"], function() {
+            mapObj.addControl(new AMap.ToolBar());
+        });
+
+       
+    }
+  	//关闭信息窗体
+    var closeInfoWindow = function() {
+        mapObj.clearInfoWindow();
+    }
+  	//构建自定义信息窗体
+    function createInfoWindow(title, obj) {
+        var info = document.createElement("div");
+        info.className = "info";
+
+        //可以通过下面的方式修改自定义窗体的宽高
+        info.style.width = "300px";
+        // 定义顶部标题
+        var top = document.createElement("div");
+        var titleD = document.createElement("div");
+        var closeX = document.createElement("img");
+        top.className = "info-top";
+        titleD.innerHTML = title;
+        closeX.src = "http://webapi.amap.com/images/close2.gif";
+        closeX.onclick = closeInfoWindow;
+
+        top.appendChild(titleD);
+        top.appendChild(closeX);
+        info.appendChild(top);
+        var content;
+
+
+        // 定义中部内容
+        var middle = document.createElement("div");
+        middle.className = "info-middle";
+        middle.style.backgroundColor = 'white';
+        middle.innerHTML = "<ol>"+obj+"</ol>";
+        info.appendChild(middle);
+
+        // 定义底部内容
+        var bottom = document.createElement("div");
+        bottom.className = "info-bottom";
+        bottom.style.position = 'relative';
+        bottom.style.top = '0px';
+        bottom.style.margin = '0 auto';
+        var sharp = document.createElement("img");
+        sharp.src = "http://webapi.amap.com/images/sharp.png";
+        bottom.appendChild(sharp);
+        info.appendChild(bottom);
+        return info;
+    }
+    </script>
+</body>
+</html>
